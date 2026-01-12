@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nugroho Indrayadi - Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Nugroho Indrayadi, a Full Stack Developer and Informatics Engineering student at UKI Toraja.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Font (Plus Jakarta Sans for Professional Look) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        blue: {
+                            900: '#1e3a8a', /* Adjust standard blue-900 if needed */
+                        },
+                        orange: {
+                            500: '#f97316',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Utilities */
+        ::selection {
+            background-color: #f97316;
+            color: white;
+        }
+        .active-nav {
+            color: #1e3a8a;
+            background-color: #eff6ff;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white py-4">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-2 cursor-pointer group">
+                    <div class="w-10 h-10 bg-blue-900 text-white flex items-center justify-center font-bold text-lg rounded-sm group-hover:bg-orange-500 transition-colors duration-300">
+                        NI
+                    </div>
+                    <div class="hidden sm:block">
+                        <h1 class="text-lg font-bold text-slate-900 leading-tight">Nugroho Indrayadi</h1>
+                        <p class="text-xs text-slate-500 font-medium tracking-wide">FULL STACK DEVELOPER</p>
+                    </div>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#home" class="nav-link px-4 py-2 text-sm font-semibold text-slate-600 hover:text-blue-900 hover:bg-slate-50 transition-colors duration-200 rounded-sm">Home</a>
+                    <a href="#about" class="nav-link px-4 py-2 text-sm font-semibold text-slate-600 hover:text-blue-900 hover:bg-slate-50 transition-colors duration-200 rounded-sm">About</a>
+                    <a href="#experience" class="nav-link px-4 py-2 text-sm font-semibold text-slate-600 hover:text-blue-900 hover:bg-slate-50 transition-colors duration-200 rounded-sm">Experience</a>
+                    <a href="#projects" class="nav-link px-4 py-2 text-sm font-semibold text-slate-600 hover:text-blue-900 hover:bg-slate-50 transition-colors duration-200 rounded-sm">Projects</a>
+                    <a href="#contact" class="ml-4 px-6 py-2.5 bg-blue-900 text-white text-sm font-bold rounded-sm hover:bg-blue-800 transition-all shadow-sm hover:shadow-md">
+                        Contact Me
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-800 p-2 hover:bg-slate-100 rounded-sm">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="px-6 py-4 space-y-2">
+                <a href="#home" class="mobile-link block w-full text-left px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-blue-900 rounded-sm">Home</a>
+                <a href="#about" class="mobile-link block w-full text-left px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-blue-900 rounded-sm">About</a>
+                <a href="#experience" class="mobile-link block w-full text-left px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-blue-900 rounded-sm">Experience</a>
+                <a href="#projects" class="mobile-link block w-full text-left px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-blue-900 rounded-sm">Projects</a>
+                <a href="#contact" class="mobile-link block w-full text-left px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-blue-900 rounded-sm">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
+        <div class="lg:w-1/2 space-y-8">
+            <div class="inline-block px-3 py-1 bg-orange-100 text-orange-700 font-bold text-xs tracking-wider uppercase rounded-sm mb-2">
+                Available for Hire
+            </div>
+            <h1 class="text-4xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+                Building Digital <br/>
+                <span class="text-blue-900 relative">
+                    Excellence.
+                    <svg class="absolute w-full h-3 -bottom-1 left-0 text-orange-500 opacity-30" viewBox="0 0 100 10" preserveAspectRatio="none">
+                        <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="8" fill="none" />
+                    </svg>
+                </span>
+            </h1>
+            <p class="text-lg text-slate-600 leading-relaxed max-w-xl">
+                I am an Informatics Engineering student at <span class="font-semibold text-slate-900">UKI Toraja</span> with a 3.95 GPA. 
+                I specialize in full-stack development, combining academic rigor with practical problem-solving.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                <a href="#projects" class="px-8 py-3.5 bg-blue-900 text-white font-bold rounded-sm shadow-lg shadow-blue-900/20 hover:bg-blue-800 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                    View Projects <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <a href="#about" class="px-8 py-3.5 bg-white border border-slate-300 text-slate-700 font-bold rounded-sm hover:border-blue-900 hover:text-blue-900 transition-all duration-300 text-center">
+                    Learn More
+                </a>
+            </div>
+
+            <div class="pt-8 flex items-center gap-6 text-slate-400">
+                <a href="#" class="hover:text-blue-900 transition-colors"><i data-lucide="github"></i></a>
+                <a href="#" class="hover:text-blue-900 transition-colors"><i data-lucide="linkedin"></i></a>
+                <a href="mailto:nugroho@example.com" class="hover:text-blue-900 transition-colors"><i data-lucide="mail"></i></a>
+            </div>
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="lg:w-1/2 relative w-full">
+            <div class="absolute top-0 right-0 -z-10 w-3/4 h-3/4 bg-blue-50 rounded-full blur-3xl opacity-60"></div>
+            <div class="relative z-10 bg-white p-2 rounded-lg shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                <!-- Abstract Code Visualization -->
+                <div class="bg-slate-900 rounded-sm p-6 overflow-hidden relative h-[360px] flex flex-col">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <div class="space-y-2 font-mono text-sm">
+                        <div class="text-slate-400">class <span class="text-yellow-400">Developer</span> {</div>
+                        <div class="pl-4 text-slate-300">name: <span class="text-green-400">"Nugroho Indrayadi"</span>;</div>
+                        <div class="pl-4 text-slate-300">role: <span class="text-green-400">"Full Stack"</span>;</div>
+                        <div class="pl-4 text-slate-300">gpa: <span class="text-orange-400">3.95</span>;</div>
+                        <div class="pl-4 text-slate-300">skills: [<span class="text-blue-400">"React"</span>, <span class="text-blue-400">"Java"</span>, <span class="text-blue-400">"Node"</span>];</div>
+                        <div class="pl-4 text-slate-300 mt-4">render() {</div>
+                        <div class="pl-8 text-blue-300">return <span class="text-white">HighQualityCode</span>;</div>
+                        <div class="pl-4 text-slate-300">}</div>
+                        <div class="text-slate-400">}</div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-slate-900 to-transparent"></div>
+                </div>
+            </div>
+            <!-- Decorative Elements -->
+            <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-orange-500 rounded-sm -z-10"></div>
+            <div class="absolute -top-6 -right-6 w-32 h-32 border-4 border-slate-100 rounded-full -z-10"></div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="bg-blue-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-3xl font-bold mb-1">3.95</div>
+                <div class="text-blue-200 text-xs font-bold uppercase tracking-widest">GPA</div>
+            </div>
+            <div>
+                <div class="text-3xl font-bold mb-1">2+</div>
+                <div class="text-blue-200 text-xs font-bold uppercase tracking-widest">Years Exp</div>
+            </div>
+            <div>
+                <div class="text-3xl font-bold mb-1">10+</div>
+                <div class="text-blue-200 text-xs font-bold uppercase tracking-widest">Projects</div>
+            </div>
+            <div>
+                <div class="text-3xl font-bold mb-1">Java</div>
+                <div class="text-blue-200 text-xs font-bold uppercase tracking-widest">Specialist</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-16">
+                <div class="md:w-1/3">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6 relative inline-block">
+                        About Me
+                        <div class="absolute -bottom-2 left-0 w-12 h-1 bg-orange-500"></div>
+                    </h2>
+                    <p class="text-slate-600 mb-6">
+                        A dedicated learner and practitioner of software engineering. My academic journey is defined by precision and a deep understanding of core computer science principles.
+                    </p>
+                    <div class="p-6 bg-slate-50 border-l-4 border-blue-900 rounded-r-sm">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i data-lucide="award" class="text-orange-500 w-6 h-6"></i>
+                            <span class="font-bold text-slate-900">Academic Excellence</span>
+                        </div>
+                        <p class="text-sm text-slate-600">
+                            Consistently maintained a high GPA while actively participating in laboratory assistantships for advanced courses.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <h3 class="font-bold text-slate-900 flex items-center gap-2">
+                            <i data-lucide="globe" class="text-blue-900 w-5 h-5"></i> Web Development
+                        </h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            My primary focus. I build responsive, accessible, and performant web applications using modern frameworks.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">React</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">Next.js</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">Tailwind</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">Node.js</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <h3 class="font-bold text-slate-900 flex items-center gap-2">
+                            <i data-lucide="server" class="text-blue-900 w-5 h-5"></i> Backend & Systems
+                        </h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Strong foundation in OOP and database management, honed through my role as a Java Laboratory Assistant.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">Java</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">MySQL</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">Linux</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full">Express</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Professional Experience</h2>
+                <div class="w-16 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Experience Card 1 -->
+                <div class="bg-white p-8 rounded-sm shadow-sm border border-slate-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-blue-900 group-hover:bg-orange-500 transition-colors"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Laboratory Assistant - Java OOP</h3>
+                            <p class="text-blue-900 font-medium">Universitas Kristen Indonesia Toraja</p>
+                        </div>
+                        <span class="mt-2 md:mt-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full uppercase">
+                            2023 - Present
+                        </span>
+                    </div>
+                    <ul class="space-y-2 text-slate-600 text-sm list-disc pl-5">
+                        <li>Selected to mentor over 30 undergraduate students in Object-Oriented Programming concepts.</li>
+                        <li>Conducted code reviews and provided detailed feedback on Java application structure.</li>
+                        <li>Assisted lecturer in grading practical examinations and assignments.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience Card 2 -->
+                <div class="bg-white p-8 rounded-sm shadow-sm border border-slate-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-blue-900 group-hover:bg-orange-500 transition-colors"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Laboratory Assistant - Operating Systems</h3>
+                            <p class="text-blue-900 font-medium">Universitas Kristen Indonesia Toraja</p>
+                        </div>
+                        <span class="mt-2 md:mt-0 px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full uppercase">
+                            2022 - 2023
+                        </span>
+                    </div>
+                    <ul class="space-y-2 text-slate-600 text-sm list-disc pl-5">
+                        <li>Guided students through Linux environment setup and command-line interface usage.</li>
+                        <li>Troubleshot laboratory hardware and software issues to ensure smooth practical sessions.</li>
+                        <li>Demonstrated process management and memory allocation concepts.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900">Featured Projects</h2>
+                    <div class="w-16 h-1 bg-orange-500 mt-4"></div>
+                </div>
+                <a href="#" class="hidden md:flex items-center gap-2 text-blue-900 font-semibold hover:text-orange-600 transition-colors">
+                    View Github <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group border border-slate-200 rounded-sm hover:border-blue-900 transition-colors duration-300 flex flex-col">
+                    <div class="h-48 bg-slate-100 relative overflow-hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-blue-900/5 group-hover:bg-blue-900/0 transition-colors"></div>
+                        <i data-lucide="book-open" class="text-slate-400 w-12 h-12 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="text-xs font-bold text-orange-600 uppercase tracking-wider mb-2">In Development</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-900 transition-colors">E-Learning Platform</h3>
+                        <p class="text-slate-600 text-sm mb-4 line-clamp-3">
+                            A comprehensive LMS designed for distance education. Features include student tracking, quiz modules, and resource sharing.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 mt-auto">
+                            <div class="flex gap-2 text-slate-400">
+                                <i data-lucide="github" class="w-4 h-4 hover:text-slate-900 cursor-pointer"></i>
+                                <i data-lucide="external-link" class="w-4 h-4 hover:text-slate-900 cursor-pointer"></i>
+                            </div>
+                            <span class="text-xs font-mono text-slate-500">React • Node • MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group border border-slate-200 rounded-sm hover:border-blue-900 transition-colors duration-300 flex flex-col">
+                    <div class="h-48 bg-slate-100 relative overflow-hidden flex items-center justify-center">
+                        <i data-lucide="server" class="text-slate-400 w-12 h-12 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Desktop App</div>
